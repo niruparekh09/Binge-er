@@ -1,15 +1,16 @@
 import React from 'react';
-import Navs from './Navs.jsx';
-import Title from './Title.jsx';
+import Navs from './Navs';
+import Title from './Title';
 
 const MainPageLayout = ({ children }) => {
   return (
     <div>
       <Title
         title="Binge-er"
-        subtitle="What Movie/Series/Actor are you looking for"
+        subtitle="Are you looking for a movie or an actor?"
       />
       <Navs />
+
       {children}
     </div>
   );

@@ -1,20 +1,18 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import NotFound from './Components/NotFound.jsx';
-import Home from './Pages/Home.jsx';
-import Show from './Pages/Show.jsx';
-import Starred from './Pages/Starred.jsx';
+
+import Home from './pages/Home';
+import Starred from './pages/Starred';
+import Show from './pages/Show';
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/starred" element={<Starred />} />
-        <Route path="*" element={<NotFound />} />
-        <Route exact path='/show/:id' element={<Show/>}/>
-      </Routes>
-    </div>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/starred" element={<Starred />} />
+      <Route exact path="/show/:id" element={<Show />} />
+      <Route element={<div>Not Found</div>} />
+    </Routes>
   );
 }
 
